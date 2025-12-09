@@ -1,4 +1,12 @@
-# Compiled class file
+
+git checkout main
+
+
+git merge master --allow-unrelated-histories
+
+
+# ----------------------------------------
+
 *.class
 
 # Log file
@@ -19,6 +27,57 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+# Project files
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+# ----------------------------------------
+
+
+git add .gitignore
+
+
+git commit -m "Resolver conflito do merge master → main"
+
+
+git push origin main
+
+
+git branch -d master
+
+
+git push origin --delete master
